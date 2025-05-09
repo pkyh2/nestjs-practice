@@ -1,0 +1,13 @@
+services:
+  nest-postgres:
+    container_name: nestjs-db
+    image: postgres:15
+    restart: always
+    ports:
+      - 5452:5432
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=nestjsadmin
+      - POSTGRES_PASSWORD=fhrfl2
+      - POSTGRES_DB=nestjsdb
